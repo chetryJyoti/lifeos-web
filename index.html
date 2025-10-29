@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeOS – Your Personal Operating System for Life</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <header class="flex flex-col items-center justify-center text-center px-6 py-20 bg-gradient-to-b from-sky-500 to-sky-400 text-white">
+    <h1 class="text-5xl font-bold mb-4">LifeOS</h1>
+    <p class="text-lg md:text-xl max-w-2xl">
+      One app to manage your <span class="font-semibold">Health</span>, <span class="font-semibold">Wealth</span>, and <span class="font-semibold">Growth</span>.
+    </p>
+    <p class="mt-4 text-white/80">Join the waitlist to get early access.</p>
+
+    <!-- Waitlist Button -->
+    <a href="https://forms.gle/Py7h2WnAZVsi3FA57" target="_blank"
+      class="mt-8 inline-block bg-white text-sky-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+      Join Waitlist
+    </a>
+  </header>
+
+  <!-- About Section -->
+  <section class="flex-1 px-6 py-16 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Your Life, Unified.</h2>
+    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+      LifeOS helps you track your body, manage your money, and grow your mind — all in one place. 
+      Stay balanced, intentional, and focused on what truly matters.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h3 class="text-xl font-semibold text-sky-600 mb-2">Health</h3>
+        <p class="text-gray-600 text-sm">Track habits, wellness, and energy daily.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h3 class="text-xl font-semibold text-sky-600 mb-2">Wealth</h3>
+        <p class="text-gray-600 text-sm">Understand your money flow and goals.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <h3 class="text-xl font-semibold text-sky-600 mb-2">Growth</h3>
+        <p class="text-gray-600 text-sm">Reflect, learn, and evolve with purpose.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t text-sm text-gray-500">
+    © <span id="year"></span> LifeOS. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
