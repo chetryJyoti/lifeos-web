@@ -115,7 +115,7 @@
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
   <!-- Hero Section -->
-  <header class="relative flex flex-col items-center justify-center text-center px-6 py-40 text-white overflow-hidden" style="background: linear-gradient(-45deg, #0ea5e9, #2563eb, #7c3aed, #ec4899); background-size: 400% 400%; animation: gradientShift 15s ease infinite;">
+  <header class="relative flex flex-col items-center justify-center text-center px-6 md:py-32 py-20 text-white overflow-hidden" style="background: linear-gradient(-45deg, #0ea5e9, #2563eb, #7c3aed, #ec4899); background-size: 400% 400%; animation: gradientShift 15s ease infinite;">
     <!-- Grid overlay -->
     <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
 
@@ -169,39 +169,54 @@
     <div class="absolute inset-0 opacity-20">
       <div class="grid-bg w-full h-full"></div>
     </div>
-    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
       <h2 class="text-4xl md:text-5xl font-black text-white mb-4 uppercase tracking-tight">Launch Countdown</h2>
       <p class="text-gray-400 text-xl mb-12 font-semibold">The Future Begins In:</p>
 
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto">
+      <div class="grid grid-cols-5 gap-2 md:gap-6 max-w-5xl mx-auto overflow-x-auto sm:overflow-visible">
         <!-- Months -->
-        <div class="countdown-item bg-gradient-to-br from-gray-900 to-gray-800 p-8 shadow-2xl border-2 border-sky-500">
-          <div id="months" class="text-5xl md:text-6xl font-black text-sky-400 mb-3">0</div>
-          <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Months</div>
+        <div class="countdown-item flex-1 min-w-[70px] bg-gradient-to-br from-gray-900 to-gray-800 p-4 md:p-8 shadow-2xl border-2 border-sky-500">
+          <div id="months" class="text-3xl md:text-6xl font-black text-sky-400 mb-2 md:mb-3">0</div>
+          <div class="text-gray-400 text-[10px] md:text-xs uppercase tracking-widest font-bold">
+            <span class="block md:hidden">Mon</span>
+            <span class="hidden md:block">Months</span>
+          </div>
         </div>
 
         <!-- Days -->
-        <div class="countdown-item bg-gradient-to-br from-gray-900 to-gray-800 p-8 shadow-2xl border-2 border-purple-500">
-          <div id="days" class="text-5xl md:text-6xl font-black text-purple-400 mb-3">0</div>
-          <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Days</div>
+        <div class="countdown-item flex-1 min-w-[70px] bg-gradient-to-br from-gray-900 to-gray-800 p-4 md:p-8 shadow-2xl border-2 border-purple-500">
+          <div id="days" class="text-3xl md:text-6xl font-black text-purple-400 mb-2 md:mb-3">0</div>
+          <div class="text-gray-400 text-[10px] md:text-xs uppercase tracking-widest font-bold">
+            <span class="block md:hidden">Day</span>
+            <span class="hidden md:block">Days</span>
+          </div>
         </div>
 
         <!-- Hours -->
-        <div class="countdown-item bg-gradient-to-br from-gray-900 to-gray-800 p-8 shadow-2xl border-2 border-pink-500">
-          <div id="hours" class="text-5xl md:text-6xl font-black text-pink-400 mb-3">0</div>
-          <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Hours</div>
+        <div class="countdown-item flex-1 min-w-[70px] bg-gradient-to-br from-gray-900 to-gray-800 p-4 md:p-8 shadow-2xl border-2 border-pink-500">
+          <div id="hours" class="text-3xl md:text-6xl font-black text-pink-400 mb-2 md:mb-3">0</div>
+          <div class="text-gray-400 text-[10px] md:text-xs uppercase tracking-widest font-bold">
+            <span class="block md:hidden">Hr</span>
+            <span class="hidden md:block">Hours</span>
+          </div>
         </div>
 
         <!-- Minutes -->
-        <div class="countdown-item bg-gradient-to-br from-gray-900 to-gray-800 p-8 shadow-2xl border-2 border-blue-500">
-          <div id="minutes" class="text-5xl md:text-6xl font-black text-blue-400 mb-3">0</div>
-          <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Minutes</div>
+        <div class="countdown-item flex-1 min-w-[70px] bg-gradient-to-br from-gray-900 to-gray-800 p-4 md:p-8 shadow-2xl border-2 border-blue-500">
+          <div id="minutes" class="text-3xl md:text-6xl font-black text-blue-400 mb-2 md:mb-3">0</div>
+          <div class="text-gray-400 text-[10px] md:text-xs uppercase tracking-widest font-bold">
+            <span class="block md:hidden">Min</span>
+            <span class="hidden md:block">Minutes</span>
+          </div>
         </div>
 
         <!-- Seconds -->
-        <div class="countdown-item bg-gradient-to-br from-gray-900 to-gray-800 p-8 shadow-2xl border-2 border-green-500">
-          <div id="seconds" class="text-5xl md:text-6xl font-black text-green-400 mb-3">0</div>
-          <div class="text-gray-400 text-xs uppercase tracking-widest font-bold">Seconds</div>
+        <div class="countdown-item flex-1 min-w-[70px] bg-gradient-to-br from-gray-900 to-gray-800 p-4 md:p-8 shadow-2xl border-2 border-green-500">
+          <div id="seconds" class="text-3xl md:text-6xl font-black text-green-400 mb-2 md:mb-3">0</div>
+          <div class="text-gray-400 text-[10px] md:text-xs uppercase tracking-widest font-bold">
+            <span class="block md:hidden">Sec</span>
+            <span class="hidden md:block">Seconds</span>
+          </div>
         </div>
       </div>
     </div>
@@ -226,9 +241,7 @@
           <div class="absolute top-4 right-4 text-7xl font-black text-white/10">01</div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 border-2 border-white/30">
-              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="#ffffff"><g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M2.5 12.89H7l3-5l4 9l3-5h4.43"/><path d="M12 21.5a9.5 9.5 0 1 0 0-19a9.5 9.5 0 0 0 0 19"/></g></svg>
             </div>
             <h3 class="text-3xl font-black text-white mb-4 uppercase tracking-tight">Health</h3>
             <p class="text-green-50 text-lg leading-relaxed font-medium">
@@ -242,9 +255,7 @@
           <div class="absolute top-4 right-4 text-7xl font-black text-white/10">02</div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 border-2 border-white/30">
-              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 17 16" fill="#ffffff"><g fill="#ffffff" fill-rule="evenodd" transform="translate(1)"><ellipse cx="12.473" cy="5.973" rx="3.473" ry="1.973"/><path d="M12.525 9.081c-2.484 0-3.473-1.041-3.473-1.644v2.583c0 1.09 1.555 1.972 3.473 1.972c1.92 0 3.475-.882 3.475-1.972V7.499c0 .604-.99 1.582-3.475 1.582z"/><path d="M12.525 13.072c-2.222 0-3.473-1.001-3.473-1.604v2.559c0 1.09 1.555 1.973 3.473 1.973c1.92 0 3.475-.883 3.475-1.973v-2.59c0 .603-1.252 1.635-3.475 1.635z"/><ellipse cx="3.937" cy="1.973" rx="3.937" ry="1.973"/><path d="M4.062 5.081C1.247 5.081.125 4.04.125 3.437V6.02c0 1.09 1.763 1.972 3.937 1.972C6.238 7.992 8 7.11 8 6.02V3.499c0 .604-1.123 1.582-3.938 1.582z"/><path d="M4.062 9.072C1.543 9.072.125 8.071.125 7.468v2.559C.125 11.117 1.888 12 4.062 12C6.238 12 8 11.117 8 10.027v-2.59c0 .603-1.42 1.635-3.938 1.635z"/><path d="M4.062 13.072c-2.519 0-3.937-1.001-3.937-1.604v2.559C.125 15.117 1.888 16 4.062 16C6.238 16 8 15.117 8 14.027v-2.59c0 .603-1.42 1.635-3.938 1.635z"/></g></svg>
             </div>
             <h3 class="text-3xl font-black text-white mb-4 uppercase tracking-tight">Wealth</h3>
             <p class="text-blue-50 text-lg leading-relaxed font-medium">
@@ -258,9 +269,7 @@
           <div class="absolute top-4 right-4 text-7xl font-black text-white/10">03</div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-white/20 backdrop-blur-sm flex items-center justify-center mb-8 border-2 border-white/30">
-              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 14 14" fill="#ffffff"><g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"><path d="m.805 9.105l4.344-4.344L7.28 6.893l5.27-5.269"/><path d="M13.09 3.248c.087-.864.087-1.339 0-2.165c-.826-.086-1.3-.086-2.165 0M4.589 13.099V8.397m4.333 4.702V8.397M.764 11.629l.196 1.47h11.977l.277-6.588"/></g></svg>
             </div>
             <h3 class="text-3xl font-black text-white mb-4 uppercase tracking-tight">Growth</h3>
             <p class="text-purple-50 text-lg leading-relaxed font-medium">
@@ -374,9 +383,10 @@
     });
 
     // Countdown Timer
-    // Set launch date to 3 months from now
-    const launchDate = new Date();
-    launchDate.setMonth(launchDate.getMonth() + 3);
+    // Set launch date to 2 months from now
+    const startDate = new Date('2025-10-30T00:00:00');
+    const launchDate = new Date(startDate);
+    launchDate.setMonth(startDate.getMonth() + 2);
 
     function updateCountdown() {
       const now = new Date().getTime();
